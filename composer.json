@@ -1,0 +1,55 @@
+{
+    "name": "macsidigital/sortable",
+    "description": "A package to sort results based on a query string in the URL",
+    "keywords": [
+        "macsidigital",
+        "colinhall17",
+        "sortable"
+    ],
+    "homepage": "https://github.com/macsidigital/sortable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Colin Hall",
+            "email": "colin@macsi.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.7.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MacsiDigital\\Sortable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MacsiDigital\\Sortable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MacsiDigital\\Sortable\\SortableServiceProvider"
+            ],
+            "aliases": {
+                "Sortable": "MacsiDigital\\Sortable\\SortableFacade"
+            }
+        }
+    }
+}
