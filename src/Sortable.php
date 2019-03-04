@@ -8,10 +8,14 @@ trait Sortable
 
     public function scopeSortable($query, $fields=[]) 
     {
-    	foreach($fields as $field){
-    		list($field, $direction) = explode('-', $field);
-    		$query->orderBy($field, $direction);
-    	}
+		foreach($fields as $field){
+			if($field != ''){
+				list($field, $direction) = explode('-', $field);
+				if(in_array($field, $this->sortable)){
+					$query->orderBy($field, $direction);		
+				}
+			}
+    	}	
     	return $query;
     }
 }

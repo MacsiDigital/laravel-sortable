@@ -2,6 +2,7 @@
 
 namespace MacsiDigital\Sortable;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class SortableServiceProvider extends ServiceProvider
@@ -42,6 +43,11 @@ class SortableServiceProvider extends ServiceProvider
             // Registering package commands.
             // $this->commands([]);
         }
+
+        Blade::directive('sortablecolumnlink', function ($expression) {
+            $expression = ($expression[0] === '(') ? substr($expression, 1, -1) : $expression;
+            return "<?php echo \MacsiDigital\Sortable\SortableColumnLink::render(array ({$expression}));?>";
+        });
     }
 
     /**
