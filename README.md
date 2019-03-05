@@ -1,11 +1,6 @@
 # Package to sort results by a field in a table
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/macsidigital/sortable.svg?style=flat-square)](https://packagist.org/packages/mancsidigital/sortable)
-[![Build Status](https://img.shields.io/travis/mancsidigital/sortable/master.svg?style=flat-square)](https://travis-ci.org/mancsidigital/sortable)
-[![Quality Score](https://img.shields.io/scrutinizer/g/mancsidigital/sortable.svg?style=flat-square)](https://scrutinizer-ci.com/g/mancsidigital/sortable)
-[![Total Downloads](https://img.shields.io/packagist/dt/mancsidigital/sortable.svg?style=flat-square)](https://packagist.org/packages/mancsidigital/sortable)
-
-A package to sort results by any field on an eloquent model.
+A simple package to sort results by any field on an eloquent model, including by joins.  Uses the Laravel default query builder order and join functions.
 
 ## Installation
 
@@ -17,15 +12,34 @@ composer require mancsidigital/sortable
 
 ## Usage
 
+Create 2 arrays in your elequent model, the first with the fields that can be sorted, the second showing any table joins.
+
 ``` php
-// Usage description here
+	protected $sortable = [
+        'name', 'email', 'addresses.country'
+    ];
+
+    protected $sortable_joins = [
+        'addresses.country' => [
+            'table_field' => 'users.id',
+            'foreign_table_field' => 'addresses.addressable_id',
+            'restrict_table_field' => 'addresses.addressable_type',
+            'restrict_value' => 'App\User'
+        ]
+    ];
 ```
 
-### Testing
+If no table joins are required then you will only need the sortable array.
 
-``` bash
-composer test
+For any joins include the table and field seperated by a period (.).
+
+Then to sort the fields simply add a sortable() and pass in any fields as an array to sort the results. This has to be in the query builder prior to any get/first requests.
+
+``` php
+	Users::sortable(explode(',', request()->query('sort')))->get();
 ```
+
+Finally you can set icons in the config file, by default fontawesome icons are used, but htis can easily be changed to whatever library you want to use.
 
 ### Changelog
 
