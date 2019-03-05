@@ -39,6 +39,16 @@ Then to sort the fields simply add a sortable() and pass in any fields as an arr
 Users::sortable(explode(',', request()->query('sort')))->get();
 ```
 
+Use the table blade helper to output sortable links, the first argument is the column name and the 2nd is an array of any key value pairs to include in the anchor tag, if a label is given it will override the column name.
+
+``` php
+<tr>
+    <th>@sortablecolumnlink('name')</th>
+    <th>@sortablecolumnlink('email')</th>
+    <th>@sortablecolumnlink('addresses.country', ['label' => 'Country', 'class' => 'country])</th>
+</tr>
+---
+
 Finally you can set icons in the config file, by default fontawesome icons are used, but this can easily be changed to whatever library you want to use.
 
 ### Changelog
