@@ -7,7 +7,7 @@ A simple package to sort results by any field on an eloquent model, including by
 You can install the package via composer:
 
 ```bash
-composer require mancsidigital/sortable
+composer require macsidigital/sortable
 ```
 
 ## Usage
@@ -15,18 +15,18 @@ composer require mancsidigital/sortable
 Create 2 arrays in your elequent model, the first with the fields that can be sorted, the second showing any table joins.
 
 ``` php
-	protected $sortable = [
-        'name', 'email', 'addresses.country'
-    ];
+protected $sortable = [
+    'name', 'email', 'addresses.country'
+];
 
-    protected $sortable_joins = [
-        'addresses.country' => [
-            'table_field' => 'users.id',
-            'foreign_table_field' => 'addresses.addressable_id',
-            'restrict_table_field' => 'addresses.addressable_type',
-            'restrict_value' => 'App\User'
-        ]
-    ];
+protected $sortable_joins = [
+    'addresses.country' => [
+        'table_field' => 'users.id',
+        'foreign_table_field' => 'addresses.addressable_id',
+        'restrict_table_field' => 'addresses.addressable_type',
+        'restrict_value' => 'App\User'
+    ]
+];
 ```
 
 If no table joins are required then you will only need the sortable array.
@@ -36,7 +36,7 @@ For any joins include the table and field seperated by a period (.).
 Then to sort the fields simply add a sortable() and pass in any fields as an array to sort the results. This has to be in the query builder prior to any get/first requests.
 
 ``` php
-	Users::sortable(explode(',', request()->query('sort')))->get();
+Users::sortable(explode(',', request()->query('sort')))->get();
 ```
 
 Finally you can set icons in the config file, by default fontawesome icons are used, but htis can easily be changed to whatever library you want to use.
