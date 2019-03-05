@@ -47,7 +47,7 @@ Use the table blade helper to output sortable links, the first argument is the c
     <th>@sortablecolumnlink('email')</th>
     <th>@sortablecolumnlink('addresses.country', ['label' => 'Country', 'class' => 'country])</th>
 </tr>
----
+```
 
 Finally you can set icons in the config file, by default fontawesome icons are used, but this can easily be changed to whatever library you want to use.
 
