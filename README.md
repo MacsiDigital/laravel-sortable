@@ -39,7 +39,7 @@ Then to sort the fields simply add a sortable() and pass in any fields as an arr
 Users::sortable(explode(',', request()->query('sort')))->get();
 ```
 
-Finally you can set icons in the config file, by default fontawesome icons are used, but htis can easily be changed to whatever library you want to use.
+Finally you can set icons in the config file, by default fontawesome icons are used, but this can easily be changed to whatever library you want to use.
 
 ### Changelog
 
