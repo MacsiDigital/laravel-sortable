@@ -2,10 +2,6 @@
 
 namespace MacsiDigital\Sortable;
 
-/**
- * Class SortableLink
- * @package Kyslik\ColumnSortable
- */
 class SortableColumnLink
 {
 
