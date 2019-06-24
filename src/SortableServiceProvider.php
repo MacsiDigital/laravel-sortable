@@ -46,6 +46,7 @@ class SortableServiceProvider extends ServiceProvider
 
         Blade::directive('sortablecolumnlink', function ($expression) {
             $expression = ($expression[0] === '(') ? substr($expression, 1, -1) : $expression;
+
             return "<?php echo \MacsiDigital\Sortable\SortableColumnLink::render(array ({$expression}));?>";
         });
     }
