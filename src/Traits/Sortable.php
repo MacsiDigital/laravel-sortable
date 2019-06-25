@@ -10,6 +10,7 @@ trait Sortable
     {
         foreach ($fields as $field) {
             if ($field != '') {
+                $direction = '';
                 [$field, $direction] = explode('-', $field);
                 if (in_array($field, $this->sortable)) {
                     if (isset($this->extended_joins) && is_array($this->extended_joins) && array_key_exists($field, $this->extended_joins)) {

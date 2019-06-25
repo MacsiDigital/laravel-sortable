@@ -13,11 +13,13 @@ class SortableColumnLink
     {
 
         // $column, $variables
+        $column = '';
+        $variables = '';
         [$column, $variables] = self::parseParameters($parameters);
 
         $label = self::formLabel($column, $variables);
 
-        $href = self::formHref($column, $variables);
+        $href = self::formHref($column);
 
         $vars = self::formParameters($variables);
 
@@ -62,8 +64,9 @@ class SortableColumnLink
                 }
             }
             if ($sorts != []) {
-                $column_in_sort = false;
                 foreach ($sorts as $sort) {
+                    $field = '';
+                    $direction = '';
                     [$field, $direction] = explode('-', $sort);
                     if ($field == $column) {
                         if ($direction == 'asc') {
@@ -81,7 +84,7 @@ class SortableColumnLink
         return $label;
     }
 
-    private static function formHref($column, $variables)
+    private static function formHref($column)
     {
         $href = '/'.request()->path().'?';
         $query = '';
@@ -97,6 +100,8 @@ class SortableColumnLink
             $i = 1;
             $column_in_sort = false;
             foreach ($sorts as $sort) {
+                $field = '';
+                $direction = '';
                 [$field, $direction] = explode('-', $sort);
                 if ($field == $column) {
                     $column_in_sort = true;
