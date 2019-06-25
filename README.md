@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/macsidigital/laravel-sortable.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-sortable)
 [![Build Status](https://img.shields.io/travis/macsidigital/laravel-sortable/master.svg?style=flat-square)](https://travis-ci.org/MacsiDigital/laravel-sortable)
+[![StyleCI](https://github.styleci.io/repos/193589045/shield?branch=master)](https://github.styleci.io/repos/193589045)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MacsiDigital/laravel-sortable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MacsiDigital/laravel-sortable/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/macsidigital/laravel-sortable.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-sortable)
 

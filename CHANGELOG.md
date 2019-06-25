@@ -1,22 +1,32 @@
 # Changelog
 
-All notable changes to `sortable` will be documented in this file
+All notable changes to `laravel-sortable` will be documented in this file
 
-## [Unreleased]
-### Changed
+## 1.0.6 - 2019-xx-xx
 
-## 1.0.3 - 2019-06-24
+- 
 
-- Update joins array to extended_joins - in preperation for addition of extended packet.
+## 1.0.5 - 2019-06-25
 
-## 1.0.2 - 2019-03-11
+- Document updates
 
-- update documentation
+## 1.0.4 - 2019-06-25
 
-## 1.0.1 - 2019-03-11
+- Document updates
 
-- now uses the macsi_join array instead of the sortable_array
+## 1.0.3 - 2019-06-25
 
-## 1.0.0 - 2019-03-05
+- Document updates
+
+## 1.0.2 - 2019-06-25
+
+- Document updates
+
+## 1.0.1 - 2019-06-25
+
+- Document updates
+
+## 1.0.0 - 2019-06-25
 
 - initial release
+
