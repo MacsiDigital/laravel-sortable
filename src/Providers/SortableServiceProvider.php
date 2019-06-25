@@ -1,7 +1,8 @@
 <?php
 
-namespace MacsiDigital\Sortable;
+namespace MacsiDigital\Sortable\Providers;
 
+use MacsiDigital\Sortable\Sortable;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
@@ -22,7 +23,7 @@ class SortableServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('sortable.php'),
+                __DIR__.'/../../config/config.php' => config_path('sortable.php'),
             ], 'config');
 
             // Publishing the views.
@@ -57,7 +58,7 @@ class SortableServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'sortable');
+        $this->mergeConfigFrom(__DIR__.'/../../config/config.php', 'sortable');
 
         // Register the main class to use with the facade
         $this->app->singleton('sortable', function () {

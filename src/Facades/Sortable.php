@@ -1,13 +1,13 @@
 <?php
 
-namespace MacsiDigital\Sortable;
+namespace MacsiDigital\Sortable\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
  * @see \MacsiDigital\Sortable\Skeleton\SkeletonClass
  */
-class SortableFacade extends Facade
+class Sortable extends Facade
 {
     /**
      * Get the registered name of the component.

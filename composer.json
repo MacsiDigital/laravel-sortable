@@ -45,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MacsiDigital\\Sortable\\SortableServiceProvider"
+                "MacsiDigital\\Sortable\\Providers\\SortableServiceProvider"
             ],
             "aliases": {
-                "Sortable": "MacsiDigital\\Sortable\\SortableFacade"
+                "Sortable": "MacsiDigital\\Sortable\\Sortable"
             }
         }
     }
