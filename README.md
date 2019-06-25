@@ -2,6 +2,7 @@
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/macsidigital/laravel-sortable.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-sortable)
 [![Build Status](https://img.shields.io/travis/macsidigital/laravel-sortable/master.svg?style=flat-square)](https://travis-ci.org/MacsiDigital/laravel-sortable)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/MacsiDigital/laravel-sortable/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/MacsiDigital/laravel-sortable/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/macsidigital/laravel-sortable.svg?style=flat-square)](https://packagist.org/packages/macsidigital/laravel-sortable)
 
 A simple package to sort results by any field on an eloquent model, including by joins.  Uses the Laravel default query builder order and join functions.

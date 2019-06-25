@@ -14,7 +14,7 @@ class SortableColumnLink
 
         // $column, $variables
         $column = '';
-        $variables = '';
+        $variables = [];
         [$column, $variables] = self::parseParameters($parameters);
 
         $label = self::formLabel($column, $variables);
@@ -84,6 +84,9 @@ class SortableColumnLink
         return $label;
     }
 
+    /**
+    * @param string $column
+    */
     private static function formHref($column)
     {
         $href = '/'.request()->path().'?';
@@ -130,6 +133,10 @@ class SortableColumnLink
         }
     }
 
+    /**
+    * @param string $direction
+    * @param string $column
+    */
     private static function formThisColumn($direction, $column, &$i)
     {
         if ($direction == 'desc') {
@@ -145,6 +152,9 @@ class SortableColumnLink
         }
     }
 
+    /**
+    * @param array $variables
+    */
     private static function formParameters($variables)
     {
         $string = '';
