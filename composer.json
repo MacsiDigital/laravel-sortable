@@ -1,12 +1,12 @@
 {
-    "name": "macsidigital/sortable",
+    "name": "macsidigital/laravel-sortable",
     "description": "A package to sort results based on a query string in the URL",
     "keywords": [
         "macsidigital",
         "colinhall17",
-        "sortable"
+        "laravel-sortable"
     ],
-    "homepage": "https://github.com/macsidigital/sortable",
+    "homepage": "https://github.com/macsidigital/laravel-sortable",
     "license": "MIT",
     "type": "library",
     "authors": [

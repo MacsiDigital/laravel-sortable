@@ -12,7 +12,7 @@ trait Sortable
             if ($field != '') {
                 [$field, $direction] = explode('-', $field);
                 if (in_array($field, $this->sortable)) {
-                    if (array_key_exists($field, $this->extended_joins)) {
+                    if (isset($this->extended_joins) && is_array($this->extended_joins) && array_key_exists($field, $this->extended_joins)) {
                         $detail = $this->extended_joins[$field];
                         $query->join($detail['foreign_table'], $detail['table_field'], $detail['foreign_table_field']);
                         if (in_array($detail['restrict_table_field'])) {
