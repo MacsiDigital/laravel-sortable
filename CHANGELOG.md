@@ -2,9 +2,13 @@
 
 All notable changes to `laravel-sortable` will be documented in this file
 
-## 1.0.6 - 2019-xx-xx
+## 1.0.7 - 2019-06-26
 
-- 
+- Document Updates
+
+## 1.0.6 - 2019-06-25
+
+- Document Updates
 
 ## 1.0.5 - 2019-06-25
 
@@ -28,5 +32,5 @@ All notable changes to `laravel-sortable` will be documented in this file
 
 ## 1.0.0 - 2019-06-25
 
-- initial release
+- Initial release
 
